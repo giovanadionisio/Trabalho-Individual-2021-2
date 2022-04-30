@@ -124,6 +124,11 @@ A etapa final do trabalho deverá ser realizada à partir do deploy automático 
 > 
 > Desta forma o trabalho está, enfim, finalizado. 
 
+> **Commits**:
+> [adicionando o job para puh no dockerhub](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/commit/0a13072976ba64f646f5457a5058060c1c437128)  
+> [alterando o nome do workflow](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/commit/7aa782e79f55f8c74d1e782bdad5e3e858bebfad)  
+> **[5. Deploy Contínuo (CD)](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/commit/c1132347842421f19905a5efc243c20f3f7900b1)**  
+ 
 ## Avaliação
 
 A avaliação do trabalho será feita à partir da correta implementação de cada etapa 1 a 5. A avaliação será feita de maneira quantitativa (se foi realizado a implementação + documentação), e qualitativa (como foi implementado, entendimento dos conceitos na prática, complexidade da solução). Para isso, faça os commits atômicos, bem documentados, completos a fim de facilitar o entendimento e avaliação do seu trabalho. Lembrando o trabalho é individual.
