@@ -15,11 +15,20 @@ services:
       - "5432"
 
   app:
-    build: .
-    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    build: 
+      context: .
+      dockerfile: ./docker/app/Dockerfile
+    command: bash -c "bundle exec puma -C config/puma.rb"
     volumes:
       - .:/aplicacao
-    ports:
-      - "3000:3000"
     depends_on:
       - db 
+  
+  web:
+    build:
+      context: .
+      dockerfile: ./docker/web/Dockerfile
+    depends_on:
+      - app
+    ports:
+      - 80:80
