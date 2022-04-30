@@ -97,6 +97,13 @@ Requisitos da configuração da Integração Contínua (Gitlab ou Github) inclue
 - Test
 - Lint
 
+> Nesta etapa foi criado o [diretório](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/tree/main/.github/workflows) de workflows do github. Foram criados três jobs:  
+> 1. Build, onde são executadas as ações para setup da base de dados.   
+> 2. Test, onse são executadas os comandos de teste indicados no [README](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/tree/main/aplicacao/README.md) da aplicação.   
+> 3. Lint, onde são realizadas inspeções com as Gems bundler-audit, brakeman e rubocop.   
+> 
+> Sendo que tanto o job Lint quanto o Test dependem do Build. Na [primeira execução da action](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/actions/runs/2250696006), o Job de Lint falhou por encontrar uma vulnerabilidade nas versões de algumas Gems. Essa vulnerabilidade foi corrigida e [todos os jobs foram executados com sucesso](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/actions/runs/2250731549).      
+
 ### 5. Deploy Contínuo (CD)
 
 A etapa final do trabalho deverá ser realizada à partir do deploy automático da aplicação que deve ser realizado à partir após passar sem erros em todas as etapas de CI.
