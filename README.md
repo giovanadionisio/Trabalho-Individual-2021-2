@@ -102,7 +102,16 @@ Requisitos da configuração da Integração Contínua (Gitlab ou Github) inclue
 > 2. Test, onse são executadas os comandos de teste indicados no [README](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/tree/main/aplicacao/README.md) da aplicação.   
 > 3. Lint, onde são realizadas inspeções com as Gems bundler-audit, brakeman e rubocop.   
 > 
-> Sendo que tanto o job Lint quanto o Test dependem do Build. Na [primeira execução da action](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/actions/runs/2250696006), o Job de Lint falhou por encontrar uma vulnerabilidade nas versões de algumas Gems. Essa vulnerabilidade foi corrigida e [todos os jobs foram executados com sucesso](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/actions/runs/2250731549).      
+> Sendo que tanto o job Lint quanto o Test dependem do Build. Na [primeira execução da action](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/actions/runs/2250696006), o Job de Lint falhou por encontrar uma vulnerabilidade nas versões de algumas Gems. Essa vulnerabilidade foi corrigida e [todos os jobs foram executados com sucesso](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/actions/runs/2250731549).        
+
+> **Commits**:  
+> [criando arquivo de workflow](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/commit/052cbf87d4dad081ae42bc039c89ff621741d21b)  
+> [adicionando job de build](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/commit/dc72d8bc294e3d3c1e2cd0af5c188d5246342feb)  
+> [adicionando job de teste](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/commit/fe61c3cb7a6c49d1517210ff6826d567a87233a4)  
+> [adicionando job de lint](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/commit/88b4aef5d898253c8ea0774b3f8d97ce8c6793b6)  
+> [movendo pasta de workflow](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/commit/277200c3e185e7f7a80419dc81fcedf448ccfc79)  
+> [corrigindo vulnerabilidades](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/commit/3d50c20450b923a20810541e01ddbae05752dd96)  
+> **[4. Integração Contínua (CI)](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/commit/d8a88747baaaf28d8c384256fc616a8ed7b475d2)**  
 
 ### 5. Deploy Contínuo (CD)
 
