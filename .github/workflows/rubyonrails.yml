@@ -1,4 +1,4 @@
-name: "Integração Contínua"
+name: "Integração Contínua e Deploy Contínuo"
 on:
   push:
     branches: [ main ]
