@@ -117,6 +117,13 @@ Requisitos da configuração da Integração Contínua (Gitlab ou Github) inclue
 
 A etapa final do trabalho deverá ser realizada à partir do deploy automático da aplicação que deve ser realizado à partir após passar sem erros em todas as etapas de CI.
 
+> Nesta etapa foi criado o job push_to_registry para que se possa executar o push das imagens para o DockerHub. Esse job depende dos jobs de Test e Lint, que, por sua vez, dependem do job de Build.  
+> As imagens estão hospedadas em:
+> - **app**: https://hub.docker.com/repository/docker/giovanadionisio/gces_trabalho-individual-2021-2-app
+> - **web**: https://hub.docker.com/repository/docker/giovanadionisio/gces_trabalho-individual-2021-2-web  
+> 
+> Desta forma o trabalho está, enfim, finalizado. 
+
 ## Avaliação
 
 A avaliação do trabalho será feita à partir da correta implementação de cada etapa 1 a 5. A avaliação será feita de maneira quantitativa (se foi realizado a implementação + documentação), e qualitativa (como foi implementado, entendimento dos conceitos na prática, complexidade da solução). Para isso, faça os commits atômicos, bem documentados, completos a fim de facilitar o entendimento e avaliação do seu trabalho. Lembrando o trabalho é individual.
