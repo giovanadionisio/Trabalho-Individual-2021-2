@@ -75,6 +75,15 @@ A aplicação originalmente está configurada para rodar com um servidor web sim
 > Entretanto, como foi criado um servidor nginx para a aplicação, basta digitar ```localhost``` no seu navegador para ter acesso à Biblioteca Pessoal.  
 > O resultado desta etapa é uma aplicação completamente containerizada, mais organizada que as anteriores (possuindo um diretório direcionado para o docker e um arquivo .dockerignore) e pronta para seguir para a integração contínua.  
 
+> **Commits**:  
+> [criando diretório de docker](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/commit/49200324b003b31f1b50ff1a162978ff179ea07b)  
+> [tornando o dockerfile da aplicação mais robusto](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/commit/c21c8e8586a32fee1cb38478fbe52d27f70185ad)  
+> [criando dockerignore](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/commit/0983411f684660a227d01bc972fabc1afc8301c8)  
+> [criando Dockerfile do nginx](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/commit/7661fe10f2408ab739daa80cbfd538af12c1eef7)  
+> [adicionando arquivo de configuração do nginx](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/commit/358c44abaabe3c22cbbfea0ce7974dccc0961dd5)  
+> [alterando o docker compose](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/commit/5072cee69736e679db47be41409af9e26acab1be)  
+> **[3. Adição de um container do Nginx](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/commit/3dd70303c4d5bf58aa7d535ca3e37f9af873bd6c)**  
+
 ### 4. Integração Contínua (CI)
 
 Para a realização desta etapa, a aplicação já deverá ter seu ambiente completamente containerizado.
