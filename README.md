@@ -40,7 +40,7 @@ Após a realização destes dois passos, a aplicação pode ser [configurada e e
 > **Commits**:  
 > [atualizando gitignore](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/commit/7ef9ce0d8d99d18ea839d18603823324a622f57e)  
 > [criando Dockerfile do banco de dados](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/commit/aaec3ffed4b7b002f8c96ae5087fb567cb64c293)  
-> [1. Containerização do Banco](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/commit/c429e1b061252a1aa24ffbb3d9f4c5408b23b5b3)  
+> **[1. Containerização do Banco](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/commit/c429e1b061252a1aa24ffbb3d9f4c5408b23b5b3)**  
 
 ### 2. Containerização da Aplicação + Banco
 
@@ -56,6 +56,14 @@ Deverá ser utilizado um orquestrador (Docker Compose) para gerenciar comunicaç
 > ```sudo docker-compose up --build```  
 > na pasta [aplicacao](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/tree/main/aplicacao). Após a inicialização dos serviços, é necessário configurar o banco de dados com o comando:  
 > ```sudo docker exec -it aplicacao_app_1 rails db:setup```
+
+> **Commits**:  
+> [removendo postgree e criando ruby Dockerfile](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/commit/bd3c2bb90ae6a74fcd4dafc387df9407f1d3ff54)  
+> [criando docker-compose](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/commit/b49f92f9318b94da36557c110d4cb689e8464015)  
+> [configurando host da BD na aplicacao](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/commit/e0fe432aaa307943fe09539aaffa21d157f71632)  
+> [corrigindo senha do banco de dados](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/commit/11cacde7750f79d60a2f233a0a344972dfa6bab0)  
+> [renomeando servico da aplicacao](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/commit/0c4148bffa86e5944f6ab82b0b3e67ccf2c86af0)  
+> **[2. Containerização da Aplicação + Banco](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/commit/254d6762733a990272c8694590daab5b38e51bda)**  
 
 ### 3. Adição de um container do Nginx 
 
