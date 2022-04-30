@@ -48,6 +48,15 @@ Nesta segunda etapa, tanto a aplicação quanto o banco de dados deverão estar 
 
 Deverá ser utilizado um orquestrador (Docker Compose) para gerenciar comunicação entre os containers além do uso de credenciais, networks, volumes, entre outras configurações necessárias para a correta execução da aplicação.
 
+> Nesta etapa tanto o banco de dados quanto a aplicação foram conteinerizados. Para o gerenciamento entre os containers foi criado um arquivo docker-compose. O Dockerfile do banco de dados, por se tratar de um serviço simples, foi removido. Assim, o container do banco se baseia em uma imagem já pronta do Postgre. Para o Ruby, por ser um serviço mais complexo, foi criado um Dockerfile.   
+> Os servicos foram nomeados como app (Ruby) e db (Postgre).  
+> Tanto o Dockerfile quando o docker-compose ainda estão localizados na raíz da [aplicacao](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/tree/main/aplicacao).  
+> 
+> Para a execução do container, utiliza-se o comando:  
+> ```sudo docker-compose up --build```  
+> na pasta [aplicacao](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/tree/main/aplicacao). Após a inicialização dos serviços, é necessário configurar o banco de dados com o comando:  
+> ```sudo docker exec -it aplicacao_app_1 rails db:setup```
+
 ### 3. Adição de um container do Nginx 
 
 A aplicação originalmente está configurada para rodar com um servidor web simples interno na porta 3000. Nesta etapa será necessário adicionar o servidor Nginx para servir a aplicação através da porta 80. O resultado final também estará expresso utilizando o Docker Compose.
