@@ -1,0 +1,3 @@
+FROM postgres:12
+ENV POSTGRES_PASSWORD postgres
+ENV POSTGRES_DB biblioteca_pessoal_development
