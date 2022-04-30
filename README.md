@@ -67,7 +67,13 @@ Deverá ser utilizado um orquestrador (Docker Compose) para gerenciar comunicaç
 
 ### 3. Adição de um container do Nginx 
 
-A aplicação originalmente está configurada para rodar com um servidor web simples interno na porta 3000. Nesta etapa será necessário adicionar o servidor Nginx para servir a aplicação através da porta 80. O resultado final também estará expresso utilizando o Docker Compose.
+A aplicação originalmente está configurada para rodar com um servidor web simples interno na porta 3000. Nesta etapa será necessário adicionar o servidor Nginx para servir a aplicação através da porta 80. O resultado final também estará expresso utilizando o Docker Compose.  
+
+> Nesta etapa foi criado um [diretório](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/tree/main/aplicacao/docker) para armazenar os Dockerfiles tanto do container app (Ruby) quanto do web (nginx). Além disso, foi criado também um arquivo [.dockerignore](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/tree/main/aplicacao/.dockerignore), para que arquivos desnecessários não sejam copiados para o container da aplicação.   
+> Assim como na etapa anterior, para o build e execução dos containers, é utilizado o comando:  
+>  ```sudo docker-compose up --build```    
+> Entretanto, como foi criado um servidor nginx para a aplicação, basta digitar ```localhost``` no seu navegador para ter acesso à Biblioteca Pessoal.  
+> O resultado desta etapa é uma aplicação completamente containerizada, mais organizada que as anteriores (possuindo um diretório direcionado para o docker e um arquivo .dockerignore) e pronta para seguir para a integração contínua.  
 
 ### 4. Integração Contínua (CI)
 
