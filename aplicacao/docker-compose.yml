@@ -1,14 +1,18 @@
-version: '3'
+version: '3.8'
 services:
   db:
     image: postgres:12
+    command: ["postgres", "-c", "fsync=false", "-c", "full_page_writes=off"]
     volumes:
-      - ./tmp/db:/var/lib/postgresql/data
+      - /var/lib/postgresql/data
     environment:
-      POSTGRES_PASSWORD: password
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
       POSTGRES_DB: biblioteca_pessoal_development
     ports:
       - "5432:5432"
+    expose: 
+      - "5432"
 
   web:
     build: .
