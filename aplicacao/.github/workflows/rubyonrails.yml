@@ -78,3 +78,37 @@ jobs:
       # Add or replace test runners here
       - name: Run tests
         run: rspec
+
+  lint:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Install Ruby and gems
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+          ruby-version: 3.0.0
+      # Add or replace any other lints here
+      - name: Install Bundle
+        run: |
+          cd aplicacao/
+          bundle install
+      - name: Install Gems
+        run: |
+          gem install bundler-audit 
+          gem install brakeman 
+          gem install rubocop 
+      - name: Security audit dependencies
+        run: |
+          cd aplicacao/
+          bundler-audit --update
+      - name: Security audit application code
+        run: |
+         cd aplicacao/
+         brakeman -q -w2
+      - name: Lint Ruby files
+        run: |
+          cd aplicacao/
+          rubocop --lint
