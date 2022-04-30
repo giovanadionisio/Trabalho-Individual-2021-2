@@ -31,6 +31,12 @@ As etapas de 4 e 5 são relacionadas à configuração do pipeline de CI e CD.
 
 A versão inicial do sistema é uma aplicação Ruby on Rails cujo funcionamento requer uma instalação de um banco de dados Postgres. A primeira etapa do trabalho é de configurar um container somente para o banco de dados com as credenciais especificadas na descrição da aplicação e testar o funcionamento do mesmo.
 
+> Nesta estapa, o banco de dados foi containerizado a partir de um arquivo ```Dockerfile```, de forma bem simples. Para a sua utilização é necessária a realização do build para que a imagem possa ser gerada. Esse passo é realizado através do comando (dentro da pasta [aplicacao](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/tree/main/aplicacao)):  
+```sudo docker build -t postgres-db ./```  
+A criação do container e a sua execução são realizadas com o comando (também na pasta [aplicacao](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/tree/main/aplicacao)):  
+```sudo docker run --name postgresdb-container -p 5432:5432 postgres-db```  
+Após a realização destes dois passos, a aplicação pode ser [configurada e executada normalmente](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/tree/main/aplicacao/README.md). 
+
 ### 2. Containerização da Aplicação + Banco
 
 Nesta segunda etapa, tanto a aplicação quanto o banco de dados deverão estar funcionando em containers individuais.
