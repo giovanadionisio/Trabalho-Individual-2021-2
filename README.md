@@ -37,6 +37,11 @@ A criação do container e a sua execução são realizadas com o comando (tamb�
 ```sudo docker run --name postgresdb-container -p 5432:5432 postgres-db```  
 Após a realização destes dois passos, a aplicação pode ser [configurada e executada normalmente](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/tree/main/aplicacao/README.md). 
 
+> **Commits**:  
+> [atualizando gitignore](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/commit/7ef9ce0d8d99d18ea839d18603823324a622f57e)  
+> [criando Dockerfile do banco de dados](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/commit/aaec3ffed4b7b002f8c96ae5087fb567cb64c293)  
+> [1. Containerização do Banco](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/commit/c429e1b061252a1aa24ffbb3d9f4c5408b23b5b3)  
+
 ### 2. Containerização da Aplicação + Banco
 
 Nesta segunda etapa, tanto a aplicação quanto o banco de dados deverão estar funcionando em containers individuais.
