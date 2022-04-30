@@ -10,3 +10,36 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:12
+        ports:
+          - "5432:5432"
+        env:
+          POSTGRES_DB: biblioteca_pessoal_test
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+    env:
+      RAILS_ENV: test
+      DATABASE_URL: "postgres://rails:password@localhost:5432/biblioteca_pessoal_test"
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      # Add or replace dependency steps here
+      - name: Install Ruby and gems
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+          ruby-version: '3.0.0'
+      - name: Install Bundle
+        run: |
+          cd aplicacao/
+          bundle install
+      - name: Set up database schema
+        run: |
+          rails db:create
+          rails db:migrate
+          rails db:seed
