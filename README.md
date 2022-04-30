@@ -124,7 +124,7 @@ A etapa final do trabalho deverá ser realizada à partir do deploy automático 
 > 
 > Desta forma o trabalho está, enfim, finalizado. 
 
-> **Commits**:
+> **Commits**:  
 > [adicionando o job para puh no dockerhub](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/commit/0a13072976ba64f646f5457a5058060c1c437128)  
 > [alterando o nome do workflow](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/commit/7aa782e79f55f8c74d1e782bdad5e3e858bebfad)  
 > **[5. Deploy Contínuo (CD)](https://github.com/giovanadionisio/Trabalho-Individual-2021-2/commit/c1132347842421f19905a5efc243c20f3f7900b1)**  
